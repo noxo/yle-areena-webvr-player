@@ -1,6 +1,9 @@
 # yle-areena-webvr-player
 This unofficial WebVR player for Yle Areena written mostly in Javascript ES6. 
 
+See it running over here:
+https://www.youtube.com/watch?v=Q7u2ixWybUw
+
 Program consist of two main Javascript modules:
 * dist/server.js, Node module for hosting index.html + client.js and acting as CORS proxy to access YLE Rest API and video stream 
 * dist/client.js, script executed in browser implementing THE player using THREE.JS
@@ -20,8 +23,8 @@ Program consist of two main Javascript modules:
 * change YLE developer keys to YLE_DEVELOPER_KEYS @ src/client/menu_scene.js
 * npm update
 * npm run-script build
-* node dist/server (web server should be now running at localhost:8080)
-* open browser to localhost:8080
+* node dist/server.js (web server should be now running at localhost:8080)
+* open browser to localhost:8080, clicking mouse button will open program or exit player
 
 <p align="center">
   <img src="media/Capture.PNG" width="800"/>
