@@ -20,7 +20,7 @@ Program consist of two main Javascript modules:
 ## Running
 
 * clone repository
-* change YLE developer keys to YLE_DEVELOPER_KEYS @ src/client/menu_scene.js
+* change YLE developer keys to Yle Developer keys to @ src/client/yle_config.js
 * npm update
 * npm run-script build
 * node dist/server.js (web server should be now running at localhost:8080)
