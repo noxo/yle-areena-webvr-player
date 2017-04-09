@@ -123,7 +123,7 @@ export default class MenuScene {
     addNewMenuItem(program, r, c) {
 
         let img = new Image();
-        img.src = "http://localhost:8080/image/upload/" + program.image.id + ".jpg";
+        img.src = `http://${location.host}/image/upload/` + program.image.id + ".jpg";
         img.onload = () => {
 
             const canvas = document.createElement('canvas');

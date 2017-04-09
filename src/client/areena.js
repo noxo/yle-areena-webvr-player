@@ -86,12 +86,12 @@ export default class Areena {
                     this.menuScene.switchLights(false, () => {
                         this.changeScene(this.playerScene);
                         const playUrl = streams[0].url;
-                        const proxiedThruLocalHostPlayUrl = new URL(playUrl);
-                        proxiedThruLocalHostPlayUrl.set("hostname", "localhost");
-                        proxiedThruLocalHostPlayUrl.set("port", "8080");
-                        proxiedThruLocalHostPlayUrl.set("protocol", "http");
-                        const stringProxiedThruLocalHostPlayUrl = proxiedThruLocalHostPlayUrl.toString();
-                        this.playerScene.start(stringProxiedThruLocalHostPlayUrl);
+                        const proxiedPlayUrl = new URL(playUrl);
+                        proxiedPlayUrl.set("hostname", `${location.hostname}`);
+                        proxiedPlayUrl.set("port", `${location.port}`);
+                        proxiedPlayUrl.set("protocol", "http");
+                        const stringproxiedPlayUrl = proxiedPlayUrl.toString();
+                        this.playerScene.start(stringproxiedPlayUrl);
                     });
                 }
             });

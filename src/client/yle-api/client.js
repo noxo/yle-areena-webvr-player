@@ -4,8 +4,8 @@ import {decrypt} from './mediaurl';
 
 // Original project https://github.com/jsalonen/yle-api
 
-const API_URL = 'http://localhost:8080/v1/';
-const IMAGES_URL = 'http://losthost:8080/image/upload/';
+const API_URL = `http://${location.host}/v1/`;
+const IMAGES_URL = `http://${location.host}/image/upload/`;
 const EVENT_TEMPORAL_STATUS_CURRENTLY = 'currently';
 const EVENT_TYPE_ONDEMAND_PUBLICATION = 'OnDemandPublication';
 
