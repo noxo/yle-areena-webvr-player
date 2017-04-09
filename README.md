@@ -20,11 +20,11 @@ Program consist of two main Javascript modules:
 ## Running
 
 * clone repository
-* change YLE developer keys to Yle Developer keys to @ src/client/yle_config.js
+* change YLE developer keys to @ src/client/yle_config.js
 * npm update
 * npm run-script build
 * node dist/server.js (web server should be now running at localhost:8080)
-* open browser to localhost:8080, clicking mouse button will open program or exit player
+* open browser to localhost:8080, mouse button will open program or exit player
 
 <p align="center">
   <img src="media/Capture.PNG" width="800"/>
