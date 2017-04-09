@@ -18,7 +18,7 @@ export default class Server
         // CORS proxy to access program icons for menu grid
         app.use('/image/upload/', proxy({target: 'http://images.cdn.yle.fi/', changeOrigin: true,logLevel:"debug"}));
         // CORS proxy access video stream, host seems to change per media type
-        app.use('/world/', proxy({target: 'http://areenapmdworld-a.akamaihd.net/', changeOrigin: true,logLevel:"debug"}));
+        app.use('/world/', proxy({target: 'https://areenapmdworld-a.akamaihd.net/', changeOrigin: true,logLevel:"debug"}));
         // to access static HTML/image stuff in dist/ folder
         app.use(express.static(path.join(__dirname, '.')));
 
