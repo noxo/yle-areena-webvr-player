@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import YleClient from './yle-api/client.js'
 import Sky from './shaders/skyshader.js';
+import YleConfig from './yle_config.js'
 
 /**
  * @author Erkki Nokso-Koivisto / http://www.vihrearobotti.com/
@@ -22,14 +23,8 @@ export default class MenuScene {
         this.MENU_ITEMS_PER_ROW = 5;
         this.MENU_ITEM_ROWS = 4;
 
-        // register for API keys at http://developer.yle.fi/index.en.html
-        const YLE_DEVELOPER_KEYS = {
-            appId: 'x',
-            appKey: 'x',
-            decryptKey: 'x'
-        };
-
-        this.yleClient = new YleClient(YLE_DEVELOPER_KEYS);
+        const yleConfig = new YleConfig();
+        this.yleClient = new YleClient(yleConfig);
 
         this.scene = new THREE.Scene();
         this.raycaster = new THREE.Raycaster();
